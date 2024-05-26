@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Changa:wght@200..800&display=swap');
+:root{
+  --var-black : #011627;
+  --var-whitegreen : #FDFFFC;
+  --var-green : #2EC4B6;
+  --var-red : #e71d36;
+  --var-orange : #FF9F1C;
+}
+html{
+  font-size: 16px;
+}
+*{
+  padding: 0;
+  margin: 0;
+  font-family: "Changa", sans-serif;
+}
+a,ul,li{
+  text-decoration: none;
+  list-style-type: none;
+}
+body{
+  background-color: #F2F6F6;
+  position: relative;
+}
+header{
+  overflow: hidden;
+  padding-left: 10%;
+  padding-right: 10%;
+  height: 92px;
+  background-color: var(--var-black);
+  color: #FDFFFC;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header > ol > li > a{
+  font-size: 1.6rem;
+  color: #FDFFFC;
+
+}
+
+header img{
+  width: 150px;
+}
+.flex{
+  padding: 2rem 5rem;
+  display: flex;
+  justify-content: center;
+  justify-content: space-between;
+  align-items: center;
+}
+.flex1 > .frame > .share{
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
+}
+.flex1 .frame > .share h1{
+  font-size: 1.4rem;
+  font-weight: 400;
+}
+.flex1 .frame > .share a i{
+  font-size: 1.9rem;
+}
+.flex1 > .frame{
+  padding: 4rem;
+  padding-top: 4rem;
+  padding-bottom: 6rem;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background-color: var(--var-whitegreen);
+  box-shadow: 3px -2px 61px -30px rgba(0,0,0,0.28);
+  -webkit-box-shadow: 3px -2px 61px -30px rgba(0,0,0,0.28);
+  -moz-box-shadow: 3px -2px 61px -30px rgba(0,0,0,0.28);
+}
+.flex1 > .frame input{
+  padding: 3px;
+  border: 1px solid black;
+  text-align: center;
+}
+.flex1 > .frame input:focus{
+  border: 1px solid --var-orange;
+}
+.flex1 > .frame input::placeholder{
+  text-align: center;
+}
+.flex1 > .frame input[type=submit]{
+  width: 7rem;
+  border: none;
+  padding: 0.3rem;
+  background-color: var(--var-orange);
+  font-weight: 500;
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+.flex2{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.flex2 h1{
+  font-size: 3.7rem;
+  color: var(--var-black);
+}
+.flex2 p{
+  font-size: 1.5rem;
+  color: var(--var-green);
+}
+
+@media screen and (max-width:430px) {
+  html{
+    font-size: 10px;
+  }
+  .flex{
+    flex-direction: column;
+    padding: 8rem 2.5rem;
+  }
+  .flex2{
+    text-align: center;
+    margin-bottom: 25px;
+  }
+  .flex1 .frame{
+    padding: 2rem;
+  }
+  
+}
