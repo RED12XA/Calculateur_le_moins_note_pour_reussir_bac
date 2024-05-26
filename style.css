@@ -42,17 +42,21 @@ header > ol > li > a{
 header img{
   width: 150px;
 }
+
 .flex{
   padding: 2rem 5rem;
   display: flex;
   justify-content: center;
   justify-content: space-between;
   align-items: center;
+
 }
+
 .flex1 > .frame > .share{
   display: flex;
   justify-content:space-between;
   align-items: center;
+  width: 100%;
 }
 .flex1 .frame > .share h1{
   font-size: 1.4rem;
@@ -112,6 +116,7 @@ header img{
     font-size: 10px;
   }
   .flex{
+    
     flex-direction: column;
     padding: 8rem 2.5rem;
   }
@@ -121,6 +126,15 @@ header img{
   }
   .flex1 .frame{
     padding: 2rem;
+  }
+  .flex1{
+    width: 100%;
+  }
+  .flex1 .frame > .share a i{
+    font-size: 3rem;
+  }
+  .flex1 .frame > .share h1{
+    font-size: 2rem;
   }
   
 }
