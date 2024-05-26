@@ -20,7 +20,6 @@ a,ul,li{
 }
 body{
   background-color: #F2F6F6;
-  position: relative;
 }
 header{
   overflow: hidden;
@@ -36,27 +35,21 @@ header{
 header > ol > li > a{
   font-size: 1.6rem;
   color: #FDFFFC;
-
 }
-
 header img{
   width: 150px;
 }
-
 .flex{
   padding: 2rem 5rem;
   display: flex;
   justify-content: center;
   justify-content: space-between;
   align-items: center;
-
 }
-
 .flex1 > .frame > .share{
   display: flex;
   justify-content:space-between;
   align-items: center;
-  width: 100%;
 }
 .flex1 .frame > .share h1{
   font-size: 1.4rem;
@@ -66,16 +59,19 @@ header img{
   font-size: 1.9rem;
 }
 .flex1 > .frame{
-  padding: 4rem;
+  padding: 2rem;
   padding-top: 4rem;
   padding-bottom: 6rem;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 0.7rem;
   background-color: var(--var-whitegreen);
   box-shadow: 3px -2px 61px -30px rgba(0,0,0,0.28);
   -webkit-box-shadow: 3px -2px 61px -30px rgba(0,0,0,0.28);
   -moz-box-shadow: 3px -2px 61px -30px rgba(0,0,0,0.28);
+}
+.flex1{
+  width: 35%;
 }
 .flex1 > .frame input{
   padding: 3px;
@@ -110,13 +106,32 @@ header img{
   font-size: 1.5rem;
   color: var(--var-green);
 }
-
+.hidden{
+  opacity: 0;
+}
+.show{
+  opacity: 1;
+}
+.bxl-facebook-square{
+  color: #1877F2;
+}
+.bxl-whatsapp-square{
+  color: 	#128c7e;
+}
+.bxl-instagram-alt{
+  color: #d62976;
+}
+i{
+  transition: 0.5s;
+}
+i:hover{
+  scale: 1.4;
+}
 @media screen and (max-width:430px) {
   html{
     font-size: 10px;
   }
   .flex{
-    
     flex-direction: column;
     padding: 8rem 2.5rem;
   }
@@ -136,5 +151,11 @@ header img{
   .flex1 .frame > .share h1{
     font-size: 2rem;
   }
-  
+  .flex1 .frame p{
+    font-size: 1.6rem;
+  }
+  .flex1 > .frame input[type=submit]{
+    width: 10rem;
+    font-size: 1.8rem;
+  }
 }

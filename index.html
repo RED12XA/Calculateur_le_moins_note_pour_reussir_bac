@@ -25,24 +25,25 @@
                 <h1>شارك مع أصدقائك :</h1>
               </div>
               <div>
-                <a href="#"><i class='bx bxl-facebook-square'></i></a>
-                <a href="#"><i><i class='bx bxl-whatsapp-square' ></i></i></a>
-                <a href="#"><i class='bx bxl-instagram-alt' ></i></a>
+                <a href="#" onclick="shareOnFacebook()"><i  class='bx bxl-facebook-square'></i></a>
+                <a href="#" onclick="shareOnWhatsApp()"><i><i class='bx bxl-whatsapp-square' ></i></i></a>
               </div>
             </div>
             <input id="noteRegional" type="text" placeholder="نقطة الجهوي"/>
             <input id="noteControlContinu" type="text" placeholder="نقطة المراقبة المستمرة"/>
-            <input id="submit" type="submit" value="أحسب" />
+            <input id="submit" type="submit" value="أحسب" onclick="calculate()" />
             <p>
-              سيتم حساب المعدل الذي يجب الحصول عليه للنجاح بمعدل <br>10، اذا أردت
+              سيتم حساب المعدل الذي يجب الحصول عليه للنجاح بمعدل 10، اذا أردت
               معدل آخر للنجاح أدخله 
-              <a href="هنا" id="expandChangeValue">هنا</a>
+              <a href="#" onclick="toggleExpand()"  id="expandChangeValue">هنا</a>
             </p>
-            <input id="valueBac" type="text">
+            <input id="valueBac" type="text" value="10" class="hidden">
           </div>
         </div>
 
       </div>
     </main>
+
+    <script src="main.js"></script>
   </body>
 </html>
