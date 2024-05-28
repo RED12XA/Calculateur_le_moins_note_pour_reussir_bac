@@ -23,7 +23,7 @@ function calculate() {
       لا باغي تعمر جيب خدم وقرا على راسك الحبيب أما لا بقيتي ناعس مايكون فراس مالك تا نص إيترو د لحليب`
       ,
       imageUrl:
-        "https://www.lavieeco.com/wp-content/uploads/2023/06/Bac_Maroc_2020.jpg",
+        "imgs/bacIMG.jpg",
       imageWidth: 400,
       imageHeight: 300,
       imageAlt: "MON BAC",
