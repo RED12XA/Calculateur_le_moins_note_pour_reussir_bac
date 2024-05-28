@@ -1,14 +1,33 @@
 const noteRegional = document.getElementById("noteRegional");
 const noteControlContinu = document.getElementById("noteControlContinu");
 let valueBac = document.getElementById("valueBac");
-
+let message;
 function calculate() {
-  let noteBac = valueBac.value
-  let reg = noteRegional.value 
-  let Crl = noteControlContinu.value 
-  let n = (4 * noteBac - reg - Crl) / 2 ;
-  let finalResult = n / 2;
-  console.log(finalResult);
+  let noteBac = parseFloat(valueBac.value);
+  let reg = parseFloat(noteRegional.value);
+  let Crl = parseFloat(noteControlContinu.value);
+  let n = (4 * noteBac - (Crl + reg)) / 2;
+  console.log(noteBac);
+  console.log(reg);
+  console.log(Crl);
+  if (isNaN(reg, Crl)) {
+    noteRegional.style.borderColor = "red";
+    noteControlContinu.style.borderColor = "red";
+    noteRegional.placeholder = "أكتب شحال جبتي في الجهوي";
+    noteControlContinu.placeholder = "أكتب معدل عام د مراقبة";
+  } else {
+    Swal.fire({
+      title: `باش تجيب ${noteBac} فالباكلوريا`,
+      text: `
+       خاصك تخدم باش تجيب ${n} فالوطني.
+      لا باغي تعمر جيب خدم وقرا على راسك الحبيب أما لا بقيتي ناعس مايكون فراس مالك تا نص إيترو د لحليب`,
+      imageUrl:
+        "https://www.lavieeco.com/wp-content/uploads/2023/06/Bac_Maroc_2020.jpg",
+      imageWidth: 400,
+      imageHeight: 300,
+      imageAlt: "MON BAC",
+    });
+  }
 }
 
 function toggleExpand() {

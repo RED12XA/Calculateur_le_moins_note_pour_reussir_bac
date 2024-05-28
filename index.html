@@ -6,19 +6,33 @@
     <title></title>
     <link rel="stylesheet" href="style.css" />
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link href="
+https://cdn.jsdelivr.net/npm/sweetalert2@11.11.0/dist/sweetalert2.min.css
+" rel="stylesheet">
+    <title>شحال خاصني نجيب باش ننجح</title>
+    <meta name="description" content="لمعرفة أقل معدل يجب الحصول عليه للنجاح بالباكالوريا" />
+    <meta property="og:title" content="شحال خاصني نجيب باش ننجح">
+    <meta property="og:site_name" content="">
+    <meta property="og:url" content="https://red12xa.github.io/monbac/">
+    <meta property="og:description" content="لمعرفة أقل معدل يجب الحصول عليه للنجاح بالباكالوريا">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://coaching-scolaire-maroc.com/wp-content/uploads/2013/03/bac-certificat-vierge.jpg?w=409&h=289">
 
   </head>
   <body>
     <header>
+      <img src="imgs/logo-school-white.png" alt="" class="animate__animated  animate__fadeInRight">
       <img src="imgs/logoBlack.png" />
+
     </header>
     <main>
       <div class="flex">
         <div class="flex2">
-          <h1>شحال خاصني نجيب باش ننجح</h1>
-          <p>لمعرفة أقل معدل يجب الحصول عليه للنجاح بالباكالوريا</p>
+          <h1 class="animate__animated animate__fadeInRight">شحال خاصني نجيب باش ننجح</h1>
+          <p class="animate__animated animate__fadeInRight">لمعرفة أقل معدل يجب الحصول عليه للنجاح بالباكالوريا</p>
         </div>
-        <div class="flex1">
+        <div class="flex1 animate__animated animate__fadeInUp">
           <div class="frame">
             <div class="share">
               <div>
@@ -29,8 +43,8 @@
                 <a href="#" onclick="shareOnWhatsApp()"><i><i class='bx bxl-whatsapp-square' ></i></i></a>
               </div>
             </div>
-            <input id="noteRegional" type="text" placeholder="نقطة الجهوي"/>
-            <input id="noteControlContinu" type="text" placeholder="نقطة المراقبة المستمرة"/>
+            <input id="noteRegional" type="text" placeholder="نقطة الجهوي"  required/>
+            <input id="noteControlContinu" type="text" placeholder="نقطة المراقبة المستمرة" required/>
             <input id="submit" type="submit" value="أحسب" onclick="calculate()" />
             <p>
               سيتم حساب المعدل الذي يجب الحصول عليه للنجاح بمعدل 10، اذا أردت
@@ -44,6 +58,13 @@
       </div>
     </main>
 
+    <div class="resultat">
+
+    </div>
+
+    <script src="
+https://cdn.jsdelivr.net/npm/sweetalert2@11.11.0/dist/sweetalert2.all.min.js
+"></script>
     <script src="main.js"></script>
   </body>
 </html>

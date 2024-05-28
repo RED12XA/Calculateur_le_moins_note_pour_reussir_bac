@@ -30,6 +30,7 @@ header{
   color: #FDFFFC;
   display: flex;
   justify-content: center;
+  justify-content: space-between;
   align-items: center;
 }
 header > ol > li > a{
@@ -74,9 +75,9 @@ header img{
   width: 35%;
 }
 .flex1 > .frame input{
-  padding: 3px;
   border: 1px solid black;
   text-align: center;
+  font-size: 1.1rem;
 }
 .flex1 > .frame input:focus{
   border: 1px solid --var-orange;
