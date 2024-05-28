@@ -23,7 +23,7 @@ function calculate() {
       لا باغي تعمر جيب خدم وقرا على راسك الحبيب أما لا بقيتي ناعس مايكون فراس مالك تا نص إيترو د لحليب`
       ,
       imageUrl:
-        "imgs/bacIMG.jpg",
+        "/imgs/bacIMG.jpg",
       imageWidth: 400,
       imageHeight: 200,
       imageAlt: "MON BAC",
