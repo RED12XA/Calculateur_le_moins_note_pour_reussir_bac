@@ -25,7 +25,7 @@ function calculate() {
       imageUrl:
         "imgs/bacIMG.jpg",
       imageWidth: 400,
-      imageHeight: 300,
+      imageHeight: 200,
       imageAlt: "MON BAC",
     });
   }
