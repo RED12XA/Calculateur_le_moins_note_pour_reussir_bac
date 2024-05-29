@@ -1,34 +1,69 @@
 const noteRegional = document.getElementById("noteRegional");
 const noteControlContinu = document.getElementById("noteControlContinu");
-let valueBac = document.getElementById("valueBac");
-let message;
+const valueBac = document.getElementById("valueBac");
+
+let found = false;
+
 function calculate() {
-  let noteBac = parseFloat(valueBac.value);
-  let reg = parseFloat(noteRegional.value);
-  let Crl = parseFloat(noteControlContinu.value);
+  // CONVERT 
+  const noteBac = parseFloat(valueBac.value);
+  const reg = parseFloat(noteRegional.value);
+  const Crl = parseFloat(noteControlContinu.value);
+  
+  // CALCUL
   let n = (4 * noteBac - (Crl + reg)) / 2;
-  console.log(noteBac);
-  console.log(reg);
-  console.log(Crl);
-  if (isNaN(reg, Crl)) {
+
+  // CHECK VALUES
+  if (isNaN(reg)) {
     noteRegional.style.borderColor = "red";
-    noteControlContinu.style.borderColor = "red";
     noteRegional.placeholder = "أكتب شحال جبتي في الجهوي";
+  } else if (isNaN(Crl)) {
+    noteControlContinu.style.borderColor = "red";
     noteControlContinu.placeholder = "أكتب معدل عام د مراقبة";
   } else {
-    Swal.fire({
-      title: `باش تجيب ${noteBac} فالباكلوريا`,
-      text: `
-       خاصك تخدم باش تجيب ${n} فالوطني.
-      لا باغي تعمر جيب خدم وقرا على راسك الحبيب أما لا بقيتي ناعس مايكون فراس مالك تا نص إيترو د لحليب`
-      ,
-      imageUrl:
-        "imgs/bacIMG.jpg",
-      imageWidth: 400,
-      imageHeight: 200,
-      imageAlt: "MON BAC",
-    });
+    noteRegional.style.borderColor = "black";
+    noteControlContinu.style.borderColor = "black";
+
+    const checkInchamps = document.querySelectorAll(".checkInchamps");
+    let found = false;
+
+    for(let i = 0 ; i < checkInchamps.length; i++){
+      if (parseFloat(checkInchamps[i].value) > 20) {
+        found = true;
+        break;
+      }
+    }
+    if (found) {
+      faqResult();
+    } else {
+      ShowResult(noteBac, n);
+    }
   }
+}
+
+function faqResult(noteBac, n){
+  Swal.fire({
+    title: `وجهك ماشي ديال المزاح البطال `,
+    text: `
+     `,
+    imageUrl: "git imgs/chinwiIMG.png",
+    imageWidth: 400,
+    imageHeight: 200,
+    imageAlt: "CHINWI ",
+  });
+}
+
+function ShowResult(noteBac, n) {
+  Swal.fire({
+    title: `باش تجيب ${noteBac} فالباكلوريا`,
+    text: `
+     خاصك تخدم باش تجيب ${n} فالوطني.
+    لا باغي تعمر جيب خدم وقرا على راسك الحبيب أما لا بقيتي ناعس مايكون فراس مالك تا نص إيترو د لحليب`,
+    imageUrl: "git imgs/bacIMG.jpg",
+    imageWidth: 400,
+    imageHeight: 200,
+    imageAlt: "MON BAC",
+  });
 }
 
 function toggleExpand() {
@@ -45,10 +80,11 @@ function shareOnFacebook() {
   );
   return false;
 }
+
 function shareOnWhatsApp() {
   const text = encodeURIComponent(
     "Kheeek had site nadi tay7sab n9ta d bac: https://red12xa.github.io/monbac/"
-  ); // Customize the text
+  );
   const whatsappUrl = `https://wa.me/?text=${text}`;
   window.open(whatsappUrl, "_blank");
 }
