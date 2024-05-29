@@ -46,7 +46,7 @@ function faqResult(noteBac, n){
     title: `وجهك ماشي ديال المزاح البطال `,
     text: `
      `,
-    imageUrl: "git imgs/chinwiIMG.png",
+    imageUrl: "imgs/chinwiIMG.png",
     imageWidth: 400,
     imageHeight: 200,
     imageAlt: "CHINWI ",
@@ -59,7 +59,7 @@ function ShowResult(noteBac, n) {
     text: `
      خاصك تخدم باش تجيب ${n} فالوطني.
     لا باغي تعمر جيب خدم وقرا على راسك الحبيب أما لا بقيتي ناعس مايكون فراس مالك تا نص إيترو د لحليب`,
-    imageUrl: "git imgs/bacIMG.jpg",
+    imageUrl: "imgs/bacIMG.jpg",
     imageWidth: 400,
     imageHeight: 200,
     imageAlt: "MON BAC",
