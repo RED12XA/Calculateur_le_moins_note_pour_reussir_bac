@@ -28,7 +28,7 @@ function calculate() {
     let found = false;
 
     for(let i = 0 ; i < checkInchamps.length; i++){
-      if (parseFloat(checkInchamps[i].value) > 20) {
+      if (parseFloat(checkInchamps[i].value) > 20 || n > 20) {
         found = true;
         break;
       }
